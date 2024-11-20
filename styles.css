@@ -1,0 +1,410 @@
+:root{
+
+  /*SIZES*/
+
+  --width-mobile: 20.4375rem;
+  --width-desktop: 33.75rem;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh; 
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
+.text{
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.020rem;
+  line-height: 1.4;
+  color: #A0A0A0;
+}
+
+.text-semiBold{
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.75rem;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-bold{
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.75rem;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+.list{
+  list-style: none;
+}
+
+.button{
+  display: block;  
+  background: transparent;
+  border-style: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.background{
+  display: none;
+  background: hsla(0, 0%, 0%, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+
+/*HEADER*/
+
+.header-container{
+  max-width: 23.4375rem;
+  width: 100%;
+  display: flex;
+  padding: 3rem 0 0 1.5rem;
+  position: absolute;
+  z-index: 20;
+}
+
+.button-menu{
+  margin-right: 6rem;
+  z-index: 21;
+}
+
+.button-menu:hover{
+  transform: scale(1.1);
+}
+
+
+/*MENU*/
+
+.menu{
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  height: 6.875rem;
+  position: absolute;
+    top: 0; left: 0;
+  z-index: 20;
+}
+
+.list-menu{
+  display: flex;
+  font-size: 1rem;
+  margin-right: 1.5rem;
+}
+
+.li-menu{
+  margin-left: 1.875rem;
+}
+
+
+/*MAIN*/
+
+.main-container{
+  max-width: 23.4375rem;
+}
+
+.section-top{
+  margin-bottom: 4.6rem;
+}
+
+.container-list{
+  position: relative;
+  z-index: 1;
+}
+
+/*LIST-IMAGE*/
+
+.container-carousel{
+  overflow-x: hidden;
+}
+
+.list-image{
+  display: flex;
+  transition: transform ease 1.2s;
+}
+
+.li-image{
+  flex: 1 0 100%;
+}
+
+.image{
+  width: 23.4375rem;
+}
+
+
+/*ANIMATION*/
+
+.anim{
+  animation-name: smoothTranslation;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+@keyframes smoothTranslation{
+
+  0%{
+    opacity: 1;
+  }
+
+  25%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+
+}
+
+
+.container-button{
+  width: 7rem;
+  height: 3.5rem;
+  display: flex;
+  position: absolute;
+    bottom: 0; right: 0;
+}
+
+.button-left, .button-right{
+  width: 50%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-button img{
+  width: 20%;
+}
+
+.container-button .button:hover{
+  background: #444444;
+}
+
+.container-button .button:hover img{
+  transform: scale(1.1);
+}
+
+.section-text{
+  width: 19.5rem;
+  margin: 0 auto;
+}
+
+.section-top-title{
+  margin-top: 3.75rem;
+  font-size: 2.5rem;
+  letter-spacing: -0.104rem;
+  line-height: 1;
+}
+
+.text{
+  margin: 1rem auto 2.875rem;
+}
+
+.link{
+  font-size: 0.9375rem;
+  letter-spacing: 0.78rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.link:hover{
+  color: #A0A0A0;
+}
+
+.arrow{
+  display: inline-block;
+  width: 2.5rem;
+  height: 0.75rem;
+  margin-left: 1rem;
+}
+
+.arrow svg{
+  fill: #000;
+}
+
+.link:hover .arrow svg{
+  fill: #A0A0A0;
+}
+
+
+/*SECTION BOTTOM*/
+
+.section-bottom{
+  margin-bottom: 3rem;
+}
+
+.section-bottom .section-text{
+  margin-top: 3rem;
+}
+
+.section-bottom-title{
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.365rem;
+}
+
+@media screen and (min-width: 90rem){
+
+  body{
+    display: grid;
+    justify-items: center;
+    align-content: start;
+  }
+
+  .background{
+    display: none;
+  }
+
+/*HEADER*/
+
+  .header-container{
+    max-width: 90rem;
+    padding: 3.875rem 0 0 3rem;
+  }
+
+  .button-menu{
+    display: none;
+  }
+
+  .button-menu:hover{
+    transform: scale(1.1);
+  }
+
+
+/*MENU*/
+
+  .menu{
+    display: block;
+    background: transparent;
+    color: #fff;
+    position: relative;
+      top: -0.15rem; left: 0;
+  }
+
+  .li-menu{
+    padding-bottom: 0.6rem;
+    position: relative;
+  }
+
+  .li-menu:hover::after{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 0.125rem;
+    background: #fff;
+    position: absolute;
+      bottom: 0; left: calc(50% - 0.5rem);
+  }
+
+
+/*MAIN*/
+
+  .main-container{
+    max-width: 90rem;
+  }
+
+  .section-top{
+    margin-bottom: 0;
+    display: flex;
+  }
+
+
+/*LIST-IMAGE*/
+
+  .container-carousel{
+    width: 52.5rem;
+  }
+  
+  .image{
+    width: 52.5rem;
+  }
+  
+  .container-button{
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+      bottom: 0; right: -10rem;
+  }
+   
+  .section-top .section-text{
+    width: 37.5rem;
+    padding: 7.5rem 6rem 0 6.25rem;
+  }
+
+  .section-top-title{
+    margin-top: 0;
+    font-size: 3rem;
+    letter-spacing: -0.125rem;
+  }
+
+  .section-top .text{
+    margin: 1rem auto 1.8rem;
+  }
+
+
+/*SECTION BOTTOM*/
+
+  .section-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+  .section-bottom img{
+    width: 26.25rem;
+  }
+
+  .section-bottom img:nth-of-type(2){
+    width: 27.5rem;
+  }
+
+  .section-bottom .section-text{
+    margin-top: 0rem;
+    width: 36.25rem;
+    padding: 3.875rem 3.375rem 0 3rem;
+  }
+
+  .section-bottom-title{
+    font-size: 1rem;
+    letter-spacing: 0.416rem;
+  }
+
+}
